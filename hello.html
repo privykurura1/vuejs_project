@@ -4,7 +4,7 @@
 </head>
 <body>
     <div id="app">
-        {{propertyName}}
+        This will be replaced
     </div>
     
 </body>
@@ -14,8 +14,9 @@
     var app = new Vue({
         el: '#app',
         data:{
-            propertyName: 'Hello Privy Getting to know Vue.js!'
+            propertyName: 'Hello Privy Getting to know Vue.js! Now using Templates'
         }
+        template: '<div>{{propertyName}}</div>'
     });
 </script>
 </html>
