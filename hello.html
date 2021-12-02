@@ -1,19 +1,16 @@
 <html>
 <head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <title>Hello Vue</title>
 </head>
 <body>
-    <div id="app">
-        <template v-if="!message">
-            <h1>You must send a mesage for help!</h1>
-            <p>Dispatch a message now!</p>
-            <p>To nearby friends!</p>
-        </template>
-        <textarea v-model="message"></textarea>
-        <button v-show="message">
-            Send word to allies for help!
-
-        </button>
+    <div class="container">
+        <h1>The multiplication table of 4.</h1>
+        <ul class="list-group">
+            <li v-for="i in 11" class="list-group-item">
+                {{i}} times 4 equals {{i * 4}}. 
+            </li>
+        </ul>
         <pre>
             {{$data | json}}
         </pre>
@@ -22,12 +19,10 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
 </script>
-<script>
+<script type="text/javascript">
     new Vue({
-        el: '#app',
-        data: {
-            message: 'Our Majesty!'
-        }
+        el: '.container',
+       
     })
 </script>
 </html>
