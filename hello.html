@@ -4,19 +4,17 @@
 </head>
 <body>
     <div id="app">
-        
+        <h1>Greetings Sir</h1>
+        <input id="message">
     </div>
     
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
 </script>
-<script>
-    var app = new Vue({
-        el: '#app',
-        data:{
-            propertyName: 'Hello Privy Getting to know Vue.js! Now using Templates'
-        }
-        template: '<div>{{propertyName}}</div>'
-    });
+<script type="text/javascript">
+    $('#message').on('keyup', function(){
+        var message = $('#message').val();
+        $('h1').text(message);
+    })
 </script>
 </html>
