@@ -4,17 +4,18 @@
 </head>
 <body>
     <div id="app">
-        <h1>Greetings Sir</h1>
-        <input id="message">
+        <textarea></textarea>
     </div>
     
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
 </script>
-<script type="text/javascript">
-    $('#message').on('keyup', function(){
-        var message = $('#message').val();
-        $('h1').text(message);
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            message: 'Our Majesty!'
+        }
     })
 </script>
 </html>
